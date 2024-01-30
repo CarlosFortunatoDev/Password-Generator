@@ -35,6 +35,8 @@ main {
 
 .box .password {
     display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
 
 }
 
@@ -55,4 +57,12 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.box .password .actions button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .2s;
 }
