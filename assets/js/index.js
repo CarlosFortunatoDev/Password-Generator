@@ -1,4 +1,5 @@
 let passwordLength = 16
+const inputEl = document.querySelector("#password")
 
 const generatePassword = () =>{
     const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSYUVWXYZ123456789?!@&*()[]"
@@ -10,8 +11,11 @@ const generatePassword = () =>{
         password += chars.substring(randomNumber, randomNumber+1)
     }
 
-    const inputEl = document.querySelector("#password")
     inputEl.value = password
+}
+
+const copy = () =>{
+    navigator.clipboard.writeText(inputEl.value) //API do navegador para copiar valores
 }
 
 const passwordLengthEl = document.querySelector('#password-length')
@@ -19,5 +23,8 @@ passwordLengthEl.addEventListener('input', () => {
     passwordLength = passwordLengthEl.value
     generatePassword()
 })
+
+const copyButtonEl = document.querySelector('#copy')
+copyButtonEl.addEventListener('click', copy)
 
 generatePassword()
