@@ -39,6 +39,7 @@ const copy = () =>{
 const passwordLengthEl = document.querySelector('#password-length')
 passwordLengthEl.addEventListener('input', () => {
     passwordLength = passwordLengthEl.value
+    document.querySelector('#password-length-text').innerText = passwordLength
     generatePassword()
 })
 upperCaseCheckEl.addEventListener('click', generatePassword)
