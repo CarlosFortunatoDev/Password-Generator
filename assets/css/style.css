@@ -59,6 +59,16 @@ main {
     user-select: none;
 }
 
+.box .password .text input.font-sm{
+    font-size: 2rem;
+}
+.box .password .text input.font-xs{
+    font-size: 1.5rem;
+}
+.box .password .text input.font-xxs{
+    font-size: 1rem;
+}
+
 .box .password .actions button{
     background-color: transparent;
     border: none;
